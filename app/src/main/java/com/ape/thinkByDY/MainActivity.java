@@ -23,7 +23,6 @@ public class MainActivity extends FragmentActivity {
     }
 
 
-    private void initView() {
-        homeContent = findViewById(R.id.home_content);
+    private void initView(){
     }
 }
