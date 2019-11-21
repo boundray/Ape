@@ -1,15 +1,48 @@
 package com.ape.thinkByDY.home.secondPage;
 
-import com.ape.thinkByDY.base.BaseFragment;
+import android.view.View;
 
-public class SecFragment extends BaseFragment<SecPagePresenter, SecPageContract.View> {
+import com.ape.thinkByDY.R;
+import com.ape.thinkByDY.base.BaseFragment;
+import com.ape.thinkByDY.home.firstPage.FirFragment;
+
+public class SecFragment extends BaseFragment<SecPagePresenter> implements SecPageContract.View {
+    public static SecFragment newInstance() {
+        SecFragment secFragment = new SecFragment();
+        return secFragment;
+    }
     @Override
-    public SecPagePresenter setPresenter() {
-        return null;
+    protected void dobusiness() {
+
     }
 
     @Override
-    public SecPageContract.View setView() {
-        return null;
+    protected void initEvent(View root) {
+
+    }
+
+    @Override
+    protected void initView(View root) {
+
+    }
+
+    @Override
+    protected int getMainLyId() {
+        return R.layout.sec_fg_main;
+    }
+
+    @Override
+    public SecPagePresenter setPresenter() {
+        return new SecPagePresenter(this);
+    }
+
+    @Override
+    public void onShowLoading() {
+
+    }
+
+    @Override
+    public void onHideLoading() {
+
     }
 }
